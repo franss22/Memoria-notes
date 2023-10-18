@@ -1,0 +1,26 @@
+# List of smells
+- [x] [[Assertion Roulette]]: The test has multiple asserts without descriptions. *(Add description parameter and ask dev to fill it)*
+- [x] [[Conditional Test Logic]]: The test has control statements, or it's result depends on a control statement. *(Hard to fix non destructively)*
+- [ ] [[Constructor Initialization]]: The test class defines fields in a constructor method instead of in a setup fixture. *(Move fields to setup fixture)*
+- [x] [[Dead Fields]]: The production or test class has fields that are never used by any test. *(Remove dead fields (?))*
+- [x] [[Duplicate Assert]]: The test checks for the same condition multiple times within the same test method.  *(Extract duplicated assertion to a new method)*
+- [x] [[Eager Test]]: The test checks several methods of a class.
+- [x] [[Empty Test]]: The test contains no executable statements.
+- [x] [[Exception Handling]]: The test throws or catches an exception *(use Assert.ThrowsException)*
+- [ ] [[For Testers Only]]: A production class contains methods used only in test methods. *(Extract those methods to a separate subclass)*
+- [x] [[General Fixture]]: The setup fixture sets up variables used in only some tests. *(Extract those variables to those specific tests)*
+- [x] [[Ignored Test]]: The test has the @ignore attribute. *(remove ignore attribute)*
+- [ ] [[Indirect Testing]]: A test class tests functionality on objects other than it's associated production class.
+- [ ] [[Lack of Cohesion of Test Methods]]: The tests are grouped in one class but have no cohesion.
+- [ ] [[Lazy Test]]: Multiple tests check the same method with the same fixture. *(Join tests into 1 bigger test)*
+- [x] [[Magic Number Test]]: The test has assertions with literal values as arguments. *(Extract local constant)*
+- [x] [[Mystery Guest]]: The test uses external resources, such as a file or database.
+- [x] [[Redundant Assertion]]: The test has an assertion which checks the equality of an object with self. *(Remove redundant assertion)*.
+- [ ] [[Redundant Print]]: The test contains a print statement. *(remove print)*
+- [ ] [[Resource Optimism]]: The test uses external resources without checking if they exist. (add fileExists, etc)
+- [ ] [[Sensitive Equality]]: The test checks for equality of objects by their ToString representation. *(Use the class' Equals() function)*
+- [x] [[Sleepy Test]]: The test uses the sleep() function.
+- [x] [[Test Code Duplication]]: Code is duplicated between test methods. *(Extract Method)*
+- [ ] [[Test Maverick]]: The test does not use the fields of the setup fixture. *(Extract Class)*
+- [ ] [[Test Run War]]: The test uses a temporary file used by other methods.
+- [x] [[Unknown Test]]: The test does not have any assertion.
